@@ -7,12 +7,12 @@ const { Pool } = require("pg");
 const s = require("../set");
 
 // Récupérez l'URL de la base de données de la variable s.DATABASE_URL
-var dbUrl=s.DATABASE_URL?s.DATABASE_URL:"postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9"
+var dbUrl = s.DATABASE_URL ? s.DATABASE_URL : "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9"
 const proConfig = {
-  connectionString: dbUrl,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+    connectionString: dbUrl,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 };
 
 // Créez une pool de connexions PostgreSQL
@@ -22,8 +22,8 @@ const pool = new Pool(proConfig);
 
 async function creerTableMention() {
     const client = await pool.connect();
-  try {
-      await client.query(`
+    try {
+        await client.query(`
         CREATE TABLE IF NOT EXISTS mention (
           id serial PRIMARY KEY,
           status text DEFAULT 'non',
@@ -32,37 +32,37 @@ async function creerTableMention() {
           message text
         );
       `);
-      console.log("La table 'mention' a été créée avec succès.");
+        console.log("La table 'mention' a été créée avec succès.");
     } catch (e) {
-      console.error("Une erreur est survenue lors de la création de la table 'mention':", e);
+        console.error("Une erreur est survenue lors de la création de la table 'mention':", e);
     } finally {
         client.release();
-      }
-  };
+    }
+};
 
 creerTableMention();
 
-  async function addOrUpdateDataInMention(url, type,message) {
-      const client = await pool.connect();
-      try {
-          const query = `
+async function addOrUpdateDataInMention(url, type, message) {
+    const client = await pool.connect();
+    try {
+        const query = `
               INSERT INTO mention (id, url, type, message)
               VALUES (1, $1, $2, $3)
               ON CONFLICT (id)
               DO UPDATE SET  url = excluded.url, type = excluded.type , message = excluded.message;
           `;
-          const values = [url, type,message];
-  
-          await client.query(query, values);
-          console.log("Données ajoutées ou mises à jour dans la table 'mention' avec succès.");
-      } catch (error) {
-          console.error("Erreur lors de l'ajout ou de la mise à jour des données dans la table 'mention':", error);
-      } finally {
-          client.release();
-      }
-  };
-  
-  
+        const values = [url, type, message];
+
+        await client.query(query, values);
+        console.log("Données ajoutées ou mises à jour dans la table 'mention' avec succès.");
+    } catch (error) {
+        console.error("Erreur lors de l'ajout ou de la mise à jour des données dans la table 'mention':", error);
+    } finally {
+        client.release();
+    }
+};
+
+
 async function modifierStatusId1(nouveauStatus) {
     const client = await pool.connect();
     try {
@@ -100,9 +100,9 @@ async function recupererToutesLesValeurs() {
 };
 
 module.exports = {
-                    addOrUpdateDataInMention,
-                    recupererToutesLesValeurs,
-                    modifierStatusId1,
+    addOrUpdateDataInMention,
+    recupererToutesLesValeurs,
+    modifierStatusId1,
 }
 
 

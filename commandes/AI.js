@@ -55,18 +55,18 @@ zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, c
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const image = arg.join(' ');
-    const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
-    
-    const data = response.data;
-    let caption = '*Propulsé par ZOKOU-MD*';
-    
-    if (data.status && data.owner && data.data) {
-      // Utiliser les données retournées par le service
-      const imageUrl = data.data;
-      zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
-    } else {
-      repondre("Erreur lors de la génération de l'image");
-    }
+      const response = await axios.get(`http://api.maher-zubair.tech/ai/photoleap?q=${image}`);
+      
+      const data = response.data;
+      let caption = '*powered by ZOKOU-MD*';
+      
+      if (data.status == 200) {
+        // Utiliser les données retournées par le service
+        const imageUrl = data.result;
+        zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
+      } else {
+        repondre("Erreur lors de la generation de l'image");
+      }
   } catch (error) {
     console.error('Erreur:', error.message || 'Une erreur s\'est produite');
     repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
@@ -83,14 +83,14 @@ zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, com
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const response = await axios.get(`https://vihangayt.me/tools/chatgpt4?q=${question}`);
-    
-    const data = response.data;
-    if (data) {
-      repondre(data.data);
-    } else {
-      repondre("Erreur lors de la génération de la reponse");
-    }
+      const response = await axios.get(`http://api.maher-zubair.tech/ai/chatgpt4?q=${question}`);
+      
+      const data = response.data;
+      if (data) {
+        repondre(data.result);
+      } else {
+        repondre("Erreur lors de la generation de la reponse.");
+      }
   } catch (error) {
     console.error('Erreur:', error.message || 'Une erreur s\'est produite');
     repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
