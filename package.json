@@ -15,9 +15,10 @@
     "Zokou",
     "whatsapp",
     "whatsapp-bot",
-    "Djalega++"
+    "Fedora",
+    "FaouzKK"
   ],
-  "author": "Djalega++",
+  "author": "Fedora && FaouzKK",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
