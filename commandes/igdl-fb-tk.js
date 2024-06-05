@@ -1,5 +1,5 @@
 const { zokou } = require('../framework/zokou');
-const { getFBInfo } = require("@xaviabot/fb-downloader");
+const getFBInfo = require("@xaviabot/fb-downloader");
 const fs = require('fs');
 const { default: axios } = require('axios');
 
