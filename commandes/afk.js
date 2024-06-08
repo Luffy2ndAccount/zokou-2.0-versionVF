@@ -22,7 +22,7 @@ zokou({
         } else {
 
             await afkfunc.changeAfkState(1,"on") ;
-            repondre("Le nessage Afk a ete activer") ;
+            repondre("Le message AFK a ete activer") ;
         }
     } else {
 
