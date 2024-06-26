@@ -20,6 +20,6 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 8000
 
-CMD ["node", "index.js"]
+CMD ["npm","run","clever"]
