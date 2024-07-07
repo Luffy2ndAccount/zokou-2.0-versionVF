@@ -30,9 +30,8 @@
 
 2. Obtenez une session du bot : <br>
   
-[Session-1](https://zokouscan.onrender.com) ; <br>
+[Session-1](https://zkscan.onrender.com/) ; <br>
 
-[session-2](https://zokou-qr-509e45b56ca5.herokuapp.com/)
   
 
 
