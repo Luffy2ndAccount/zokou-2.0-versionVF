@@ -103,9 +103,9 @@
     "required": true,
     "value": "oui"
   },
-  "ANTI_DELETE_MESSAGE":
+  "ANTI_VUE_UNIQUE":
   {
-    "description": "Mettez oui si vous voulez que les message supprimer vous sois envoyez en pv",
+    "description": "Mettez oui si vous voulez que le contenue des message en vue unique vous sois envoyez en pv",
     "required": false,
     "value": "non"
   },

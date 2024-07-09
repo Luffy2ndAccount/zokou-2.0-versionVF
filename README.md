@@ -30,10 +30,8 @@
 
 2. Obtenez une session du bot : <br>
   
-[Session-1](https://zkscan.onrender.com/) ; <br>
-
+[Session-1](https://zkscan.onrender.com) ; <br>
   
-
 
 ## Déploiement
 - **déploiement sur heroku**
