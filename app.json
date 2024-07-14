@@ -114,7 +114,12 @@
     "description": "Mettez oui si vous voulez que les message que le bot reponde automatiquement aux messages en pv",
     "required": false,
     "value": "non"
-  }
+  },
+  "ANTI_COMMAND_SPAM" : {
+        "description":"Ajoutez un temps de refroidissement d'une minute apres chaque commande pour les autres utilisateur(pour activer choississez *oui*)",
+        "required":false,
+        "value" :"non"
+      }
   },
 
   "formation": {

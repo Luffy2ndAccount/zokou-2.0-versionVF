@@ -30,7 +30,8 @@
 
 2. Obtenez une session du bot : <br>
   
-[Session-1](https://zkscan.onrender.com) ; <br>
+[Session-1](https://zkscan.onrender.com)  <br>
+[Session-2](https://zokouscan.onrender.com) <br>
   
 
 ## Déploiement
