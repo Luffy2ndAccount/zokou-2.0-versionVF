@@ -68,6 +68,7 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.10.4",
-    "ytdl-core": "github:FaouzKK/node-ytdl-core"
+    "ytdl-core": "npm:@distube/ytdl-core@latest",
+    "zokou-2.0": "file:"
   }
 }
