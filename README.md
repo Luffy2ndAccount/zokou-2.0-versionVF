@@ -54,15 +54,18 @@ Zokou est un bot multi-devices conçu pour enrichir vos conversations WhatsApp a
      TELECHARGER_AUTO_STATUS=oui
      NOM_BOT=Zokou-MD
      LIENS_MENU=https://wallpapercave.com/uwp/uwp3943464.jpeg
+     PM_PERMIT=non
      MODE_PUBLIC=oui
-     DATABASE_URL=postgresql://postgres:qpKFTRbwkdlrjBDesLkdeFKNuwHeyZhj@junction.proxy.rlwy.net:10771/railway
+     ETAT=1
+     SESSION_ID=zokk
      NOM_OWNER=Djalega++
      NUMERO_OWNER=22891733300
      WARN_COUNT=3
      STARTING_BOT_MESSAGE=oui
-     ETAT=1
-     SESSION_ID='mettez votre session'
      ANTI_VUE_UNIQUE=oui
+     PM_CHATBOT=non
+     DATABASE_URL=postgresql://postgres:qpKFTRbwkdlrjBDesLkdeFKNuwHeyZhj@junction.proxy.rlwy.net:10771/railway
+     ANTI_COMMAND_SPAM=non
      ```
 
   8. Cliquez sur **Add env** pour enregistrer, puis modifiez selon vos besoins. N'oubliez pas d'entrer votre session ID.  
