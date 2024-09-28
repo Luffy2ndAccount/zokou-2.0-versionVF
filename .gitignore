@@ -1,0 +1,11 @@
+node_modules
+/.jpg
+/.mp4
+/.webp
+/set.env
+/store.json
+/package-lock.json
+/audio.mp3
+/code-obsrtui
+/auth
+/.opus
