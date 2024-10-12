@@ -42,8 +42,8 @@ Zokou est un bot multi-devices conçu pour enrichir vos conversations WhatsApp a
 - **Déploiement sur Render** :
   1. Si vous n'avez pas de compte **Render**, cliquez [**ici**](https://dashboard.render.com) pour vous inscrire.
   2. Créez un nouveau sweb service.  
-  3. Choisissez **Existing Image**.  
-  4. Dans le champ **Image URL**, entrez `docker.io/luffy077/zokouvf:latest`.  
+  3. Choisissez **Public Git Repository**.  
+  4. Dans le champ , entrez `https://gitlab.com/bankai421341/senbonzakura.git`.
   5. Cliquez sur **Connect**.  
   6. Sélectionnez le **Free Plan** si vous ne voulez pas payer.  
   7. Dans la section **environemment variable**, cliquez sur **Add from .env** et copiez le contenu suivant :
