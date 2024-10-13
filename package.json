@@ -1,5 +1,5 @@
 {
-  "name": "Snake༒VK-8",
+  "name": "zokou-2.0",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -7,14 +7,14 @@
   "scripts": {
     "test": "node index.js",
     "s": "node index.js",
-    "Snake༒VK-8": "pm2 start index.js --attach",
+    "zokou": "pm2 start index.js --attach",
     "web": "pm2 start web.js --attach",
     "c": "tsc"
   },
   "keywords": [
     "bot",
     "Baileys",
-    "Snake༒VK-8",
+    "Zokou",
     "whatsapp",
     "whatsapp-bot",
     "Fedora",
