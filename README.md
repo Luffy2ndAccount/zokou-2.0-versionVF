@@ -64,7 +64,6 @@ Zokou est un bot multi-devices conçu pour enrichir vos conversations WhatsApp a
      STARTING_BOT_MESSAGE=oui
      ANTI_VUE_UNIQUE=oui
      PM_CHATBOT=non
-     DATABASE_URL=postgresql://zokouvf_user:rAzO0xc7jeW5fN2Ts912VpnNyc7dCCWj@dpg-cs9kumi3esus739h5neg-a.oregon-postgres.render.com/zokouvf
      ANTI_COMMAND_SPAM=non
      ```
 
